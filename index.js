@@ -1,9 +1,10 @@
 'use strict';
+var empty = Buffer(0)
+
 module.exports =
 function readable(chunk) {
-  var buf
-
-  push(chunk)
+  var buf = Buffer(chunk)
+  read.able = buf.length
   
   function read(n) {
     if (n === -1)

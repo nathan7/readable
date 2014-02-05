@@ -31,7 +31,7 @@ it('should return the requested bytes when read', function() {
 it('should be readable when non-empty after reading', function() {
   var read = Readable('abcdef')
   read(3)
-  assert.equal(read.able, true)
+  assert.equal(!!read.able, true)
 })
 
 it('should not be readable after reading all chunks', function() {
@@ -49,12 +49,17 @@ it('should return the first byte unwrapped when asked for -1', function() {
 it('should be readable after reading a byte unwrapped', function() {
   var read = Readable('abcdef')
   read(-1)
-  assert.equal(read.able, true)
+  assert.equal(!!read.able, true)
 })
 
 it('should not be readable after reading the last byte unwrapped', function() {
   var read = Readable('abcdef')
   read(5)
   read(-1)
-  assert.equal(read.able, false)
+  assert.equal(!!read.able, false)
+})
+
+it('should always allow reading zero bytes', function() {
+  var read = Readable('')
+  assert.deepEqual(read(0), Buffer(0))
 })
