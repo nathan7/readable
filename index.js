@@ -7,6 +7,9 @@ function readable(chunk) {
   read.able = buf.length
   
   function read(n) {
+    if (n === 0)
+      return empty
+
     if (n === -1)
       return read(1)[0]
 
