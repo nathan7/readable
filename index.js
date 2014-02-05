@@ -12,7 +12,7 @@ function readable(chunk) {
     var chunk = buf.slice(0, n)
     buf = buf.slice(n)
 
-    read.able = buf.length !== 0
+    read.able = buf.length
     if (!read.able && chunk.length < n)
       throw new Error('premature end of input')
 
@@ -30,7 +30,7 @@ function readable(chunk) {
       ? Buffer.concat(buf, chunk)
       : chunk
 
-    read.able = true
+    read.able = buf.length
   }
 
   return read

@@ -23,7 +23,7 @@
 
 ### read.able
 
-  Boolean value. Becomes false when the buffer is empty.
+  Amount of bytes left in the buffer.
 
 ### read.push(chunk)
 
