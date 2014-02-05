@@ -9,7 +9,7 @@
 ## API
 ### Readable(buf) → function read(n)
 
-  Creates your readable. Will do `buf = Buffer(buf)` if `!Buffer.isBuffer(buf)`.
+  Creates your readable. Will cast buf to a Buffer.
 
 ### read(n) → Buffer
 
@@ -24,4 +24,8 @@
 ### read.able
 
   Boolean value. Becomes false when the buffer is empty.
+
+### read.push(chunk)
+
+  Push another chunk onto your buffer. Will cast chunk to a Buffer.
 
