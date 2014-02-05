@@ -1,0 +1,28 @@
+{
+  "name": "readable",
+  "version": "1.0.0",
+  "description": "make buffers into something you can slice bytes off at will, for when a stream is too much.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nathan7/readable.git"
+  },
+  "keywords": [
+    "readable",
+    "lightweight",
+    "synchronous",
+    "stream"
+  ],
+  "author": "Nathan Zadoks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathan7/readable/issues"
+  },
+  "homepage": "https://github.com/nathan7/readable",
+  "devDependencies": {
+    "mocha": "~1.17.1"
+  }
+}
