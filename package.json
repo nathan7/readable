@@ -1,6 +1,6 @@
 {
   "name": "readable",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "make buffers into something you can slice bytes off at will, for when a stream is too much.",
   "main": "index.js",
   "scripts": {
