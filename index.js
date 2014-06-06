@@ -30,11 +30,12 @@ function readable(chunk) {
 
     if (!chunk.length) return
 
-    buf = (buf && buf.length)
-      ? Buffer.concat(buf, chunk)
-      : chunk
-
-    read.able = buf.length
+    if (buf && buf.length)
+      buf = Buffer.concat([buf, chunk], read.able += chunk.length)
+    else {
+      read.able = chunk.length
+      buf = chunk
+    }
   }
 
   return read
